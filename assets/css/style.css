@@ -1,0 +1,121 @@
+
+
+
+
+
+main {
+    margin: 10px auto;
+    max-width: 600px;
+    background-color:  #E5E5E5;
+
+}
+
+main nav{
+    width: 100%;
+    height: 92px;
+    background-color: #CF2B2B;
+}
+
+section .opcoes, .opcoes-principal{
+    display: flex;
+    width: 100%;
+    height: 230px;
+    
+    overflow-x: scroll;
+}
+
+section .opcoes::-webkit-scrollbar{
+    width: 1px;
+}
+
+section .opcoes::-webkit-scrollbar-track{
+    border-radius: 10px;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.25);
+}
+
+section .opcoes::-webkit-scrollbar-thumb{
+    background-color: #CF2B2B;
+    border-radius: 10px;
+}
+
+.card-opcao-principal, .card-opcao-bebida, .card-opcao-sobremesa{
+    border-radius: 10px;
+    padding: 20px;
+    width: 170px;
+    background-color: aliceblue;
+    margin: 5px 10px;
+    position: relative;
+
+    border: 5px solid white;
+  
+}
+
+#check-item-frango, 
+#check-item-carne, 
+#check-item-peixe, 
+#check-item-ovo,
+#check-item-refrigerante,
+#check-item-agua,
+#check-item-suco,
+#check-item-energetico{
+    position: absolute;
+    bottom:10px;
+    right: 10%;
+    display: none;
+}
+
+
+
+
+
+
+
+.sidebar-fixed-bottom{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 75px;
+    background-color: #FFF;
+    position: sticky;
+    bottom: 0;
+
+}
+
+.btn{
+    width: 364px;
+    height: 61px;
+    background-color: #CBCBCB;
+    border-radius: 40px;
+    color: #fff;
+    border: none;
+    font-size: 20px;
+}
+
+.btn.active{
+    width: 364px;
+    height: 61px;
+    background-color: #39f813;
+    border-radius: 40px;
+    color: #fff;
+    border: none;
+    font-size: 20px;
+}
+
+
+
+.borda-verde, .borda-verde-bebida, .borda-verde-sobremesa{
+    border: 5px solid green;
+    
+}
+
+.borda-verde .hide, .borda-verde-bebida .hide, .borda-verde-sobremesa .hide {
+    display: block;
+}
+
+
+.hide{
+    display: none;
+}
+

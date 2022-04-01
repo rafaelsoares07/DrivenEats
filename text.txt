@@ -1,0 +1,62 @@
+let pratos = document.querySelectorAll(".card-opcao-principal");
+let bebidas = document.querySelectorAll(".card-opcao-bebida");
+let sobremesas = document.querySelectorAll('.card-opcao-sobremesa');
+
+
+
+
+
+//SELEÇÃO DE ITENS
+pratos.forEach((prato)=>{
+prato.addEventListener('click', ()=>{
+
+
+    pratos.forEach(el=>{
+        el.style.borderColor = "white";
+        el.lastElementChild.style.display = 'none'
+    })
+    prato.style.borderColor ="green";
+    let btn = prato.lastElementChild.style.display = 'block';
+
+    let nomePrato = prato.getAttribute("name");
+    let precoPrato = prato.getAttribute("preco");
+
+    console.log(nomePrato + precoPrato)
+
+   
+
+ })
+})
+
+bebidas.forEach((bebida)=>{
+    bebida.addEventListener('click', ()=>{
+    
+    
+        bebidas.forEach(el=>{
+            el.style.borderColor = "white";
+            el.lastElementChild.style.display = 'none'
+        })
+        bebida.style.borderColor ="green";
+        let btn = bebida.lastElementChild.style.display = 'block';
+    
+       
+    
+     })
+    })
+ 
+    sobremesas.forEach((sobremesa)=>{
+        sobremesa.addEventListener('click', ()=>{
+        
+        
+            sobremesas.forEach(el=>{
+                el.style.borderColor = "white";
+                el.lastElementChild.style.display = 'none'
+            })
+            sobremesa.style.borderColor ="green";
+            let btn = sobremesa.lastElementChild.style.display = 'block';
+        
+            
+           
+        
+         })
+        })
