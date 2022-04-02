@@ -4,6 +4,8 @@ let bebida=null
 let  valorBebida=null
 let  sobremesa=null
 let  valorSobremesa=null
+let rua;
+let pessoa;
 
 
 function pratoEscolhido(el){
@@ -89,11 +91,13 @@ function analisarEstadoButtom(){
     if(principal!==null && bebida!==null && sobremesa!==null){
         //alert('tem conteudo')
         btn.classList.add('active')
+        btn.innerHTML = "Finalizar pedido"
     }
     else{
         
         //alert('nao escolheu nada')
         btn.classList.remove('active')
+        btn.innerHTML = "Selecione os 3 itens para fechar o pedido"
        
     }
 }
@@ -103,11 +107,36 @@ function fecharPedido(){
         alert('Escolha um item de cada categoria')
     }
     else{
-    let rua = prompt('Qual sua rua?')
-    let pessoa = prompt('Qual o seu nome?')
+     rua = prompt('Qual sua rua?')
+     pessoa = prompt('Qual o seu nome?')
+    let valorTotal = Number(valorPrincipal)+ Number(valorBebida)+Number(valorSobremesa)
 
-    alert(principal + bebida+ sobremesa+ rua+pessoa)
+    document.querySelector('.tela-confirmacao').style.display = 'block'
+
+    document.querySelector('.pratoEscolhido').innerHTML = principal;
+    document.querySelector('.valor-prato').innerHTML = valorPrincipal;
+
+    document.querySelector('.bebidaEscolhida').innerHTML = bebida;
+    document.querySelector('.valor-bebida').innerHTML = valorBebida;
+
+    document.querySelector('.sobremesaEscolhida').innerHTML = sobremesa;
+    document.querySelector('.valor-sobremesa').innerHTML = valorSobremesa;
+
+    document.querySelector('.valor-total').innerHTML = valorTotal+' R$'
+
+
+    // como fazer pra acrescentar texto sem tirar o anterior
+    let total = document.querySelector('total').innerHTML
+
+    total.innerHTML += 'oi'
+
+    console.log(total)
+    
+
     }
     
 }
 
+function fecharTelaConfirmacao(){
+    document.querySelector('.tela-confirmacao').style.display = 'none';
+}
