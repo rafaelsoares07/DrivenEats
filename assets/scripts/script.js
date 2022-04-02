@@ -6,6 +6,8 @@ let  sobremesa=null
 let  valorSobremesa=null
 let rua;
 let pessoa;
+let url;
+
 
 
 function pratoEscolhido(el){
@@ -125,12 +127,16 @@ function fecharPedido(){
     document.querySelector('.valor-total').innerHTML = valorTotal+' R$'
 
 
-    // como fazer pra acrescentar texto sem tirar o anterior
-    let total = document.querySelector('total').innerHTML
+    //Mensagem WSP
+    
+    let msg =  `Olá gostaria de fazer um pedido: \n -Prato: ${principal} \n -Bebida: ${bebida} \n -Sobremessa: ${sobremesa} \n Total: ${valorTotal} R$ \n Nome: ${pessoa} \n Endereço: ${rua}`;
 
-    total.innerHTML += 'oi'
+    url = 'https://wa.me/5584996028687?text=' + encodeURIComponent(msg)
 
-    console.log(total)
+
+    
+    console.log(encodeURIComponent(msg))
+    
     
 
     }
@@ -139,4 +145,8 @@ function fecharPedido(){
 
 function fecharTelaConfirmacao(){
     document.querySelector('.tela-confirmacao').style.display = 'none';
+}
+
+function abrirLink(){
+    let win = window.open(url,'_blank')
 }
