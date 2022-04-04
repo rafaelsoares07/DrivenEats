@@ -124,7 +124,7 @@ function fecharPedido(){
     document.querySelector('.sobremesaEscolhida').innerHTML = sobremesa;
     document.querySelector('.valor-sobremesa').innerHTML = valorSobremesa;
 
-    document.querySelector('.valor-total').innerHTML = valorTotal+' R$'
+    document.querySelector('.valor-total').innerHTML = valorTotal.toFixed(2)+' R$'
 
 
     //Mensagem WSP
